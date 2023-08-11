@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTM-Bot</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+            background-color: #111;
+        }
+
+        .title {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            color: #fff;
+            z-index: 1;
+        }
+
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        .iframe-container iframe {
+            width: 80%; /* Adjust as needed */
+            max-width: 800px; /* Set a maximum width if needed */
+            border: none;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            animation: colorGlow 6s infinite alternate;
+        }
+
+        @keyframes colorGlow {
+            0% {
+                filter: drop-shadow(0 0 15px #8a41ff); /* Purple glow */
+            }
+            50% {
+                filter: drop-shadow(0 0 15px #3366ff); /* Blue glow */
+            }
+            100% {
+                filter: drop-shadow(0 0 15px #ff4040); /* Red glow */
+            }
+        }
+
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0;
+            animation: twinkle 4s infinite;
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 50%;
+            opacity: 0;
+            transform: rotate(-45deg);
+            animation: shootingStar 3s linear infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.5);
+            }
+        }
+
+        @keyframes shootingStar {
+            0% {
+                opacity: 0;
+                transform: rotate(-45deg) translateX(0);
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(-45deg) translateX(-500px);
+            }
+        }
+
+        .linkedin-logo {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2; /* Adjust z-index to bring the logo above the background */
+        }
+
+        .linkedin-logo img {
+            width: 40px;
+            height: auto;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="animated-bg">
+        <!-- Generate stars and shooting stars using JavaScript -->
+    </div>
+
+    <div class="title">
+        UTM-Bot
+    </div>
+
+    <div class="iframe-container">
+        <iframe
+            src="https://app.gpt-trainer.com/gpt-trainer-widget/b084a1db46754e5485cc9cc3752617b9"
+            width="100%"
+            height="500px"
+            frameborder="0"
+        ></iframe>
+    </div>
+
+    <div class="linkedin-logo">
+        <a href="https://www.linkedin.com/in/joshua-paul-97451292/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+        </a>
+    </div>
+
+    <!-- Add JavaScript here -->
+    <script>
+        const animatedBg = document.querySelector('.animated-bg');
+
+        for (let i = 0; i < 50; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.top = `${Math.random() * 100}vh`;
+            star.style.left = `${Math.random() * 100}vw`;
+            animatedBg.appendChild(star);
+        }
+
+        for (let i = 0; i < 5; i++) {
+            const shootingStar = document.createElement('div');
+            shootingStar.classList.add('shooting-star');
+            shootingStar.style.top = `${Math.random() * 100}vh`;
+            shootingStar.style.left = `${Math.random() * 100}vw`;
+            animatedBg.appendChild(shootingStar);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

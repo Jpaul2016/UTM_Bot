@@ -19,18 +19,19 @@
 
         .container {
             display: flex;
-            flex-direction: column; /* Change to column for mobile */
-            align-items: center; /* Center align for mobile */
+            flex-direction: row;
+            align-items: flex-start;
             justify-content: flex-start;
-            min-height: 100vh; /* Use min-height to ensure content extends to the bottom */
+            height: 100vh;
         }
 
         .title-container {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center align for mobile */
+            align-items: flex-start;
             justify-content: flex-start;
             margin-top: 20px;
+            margin-left: 20px;
         }
 
         /* Updated style for the neon header with a larger and more pronounced glowing effect */
@@ -39,7 +40,6 @@
             font-size: 24px;
             color: #fff;
             transition: color 0.3s ease, text-shadow 0.3s ease;
-            text-align: center; /* Center align for mobile */
         }
 
         /* Apply an increased glowing effect with a larger radius to the text when hovered */
@@ -48,15 +48,23 @@
             text-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Larger and more pronounced glow */
         }
 
+        .vertical-line {
+            width: 2px;
+            height: 100vh;
+            background-color: #fff;
+            margin-left: 20px;
+        }
+
         .additional-text-container {
-            margin-top: 10px; /* Adjust margin as needed for mobile */
-            text-align: center; /* Center align for mobile */
+            margin-left: 0;
+            margin-top: 20px;
         }
 
         .additional-text {
             font-family: 'Montserrat', sans-serif;
             font-size: 15px;
             color: #fff;
+            text-align: left;
         }
 
         .iframe-container {
@@ -64,6 +72,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            flex: 1;
             margin-top: 20px;
             box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
             border-radius: 15px;
@@ -90,10 +99,7 @@
         .linkedin-logo {
             position: absolute;
             bottom: 20px;
-            left: 0;
-            right: 0;
-            margin: 0 auto; /* Center horizontally */
-            text-align: center; /* Center align for mobile */
+            left: 20px;
             z-index: 2;
         }
 
@@ -105,12 +111,13 @@
         /* Media query for screens smaller than 768px (typical for mobile devices) */
         @media (max-width: 768px) {
             .container {
-                align-items: flex-start; /* Align content to the left for mobile */
+                flex-direction: column;
+                align-items: center;
             }
 
             .title-container {
-                align-items: flex-start; /* Align content to the left for mobile */
-                margin-left: 20px; /* Add margin for left alignment */
+                margin: 20px 0;
+                text-align: center;
             }
 
             .neon-header {
@@ -119,10 +126,14 @@
 
             .additional-text-container {
                 margin-top: 10px;
-                text-align: left; /* Align text to the left for mobile */
             }
 
             .iframe-container {
+                margin-top: 20px;
+            }
+
+            .linkedin-logo {
+                position: relative;
                 margin-top: 20px;
             }
 
@@ -148,6 +159,7 @@
                 </div>
             </div>
         </div>
+        <div class="vertical-line"></div>
         <div class="iframe-container">
             <iframe
                 src="https://app.gpt-trainer.com/gpt-trainer-widget/b084a1db46754e5485cc9cc3752617b9"

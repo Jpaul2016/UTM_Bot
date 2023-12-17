@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UTM-Bot</title>
 
-    <link rel=""icon" href="favicon-32x32.png" type="'image/x-icon">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
     <style>
+        /* Common styles for both desktop and mobile */
         body {
             margin: 0;
             padding: 0;
@@ -106,6 +107,36 @@
             width: 40px;
             height: auto;
         }
+
+        /* Media query for screens smaller than 768px (typical for mobile devices) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .title-container {
+                margin: 20px 0;
+                text-align: center;
+            }
+
+            .neon-header {
+                font-size: 20px;
+            }
+
+            .additional-text-container {
+                margin-top: 10px;
+            }
+
+            .iframe-container {
+                margin-top: 20px;
+            }
+
+            .linkedin-logo {
+                position: relative;
+                margin-top: 20px;
+            }
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
@@ -114,7 +145,7 @@
 
     <div class="container">
         <div class="title-container">
-            <div class="title neon-header"> <!-- Apply the "neon-header" class here -->
+            <div class="title neon-header">
                 UTM-Bot
             </div>
             <div class="additional-text-container">
@@ -137,9 +168,9 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
         </a>
     </div>
-
 </body>
 </html>
+
 
 
 

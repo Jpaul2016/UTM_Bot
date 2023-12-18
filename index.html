@@ -95,10 +95,10 @@
         }
 
         .linkedin-logo {
-            position: relative;
-            margin-top: 20px;
-            width: 100%;
-            text-align: center;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 2;
         }
 
         .linkedin-logo img {
@@ -111,6 +111,7 @@
             .container {
                 flex-direction: column;
                 align-items: center;
+                height: auto;
             }
 
             .title-container {
@@ -135,7 +136,8 @@
             }
 
             .linkedin-logo {
-                position: relative;
+                position: static;
+                display: block;
                 margin-top: 20px;
                 width: 100%;
                 text-align: center;
@@ -165,14 +167,16 @@
                 frameborder="0"
             ></iframe>
         </div>
-        <div class="linkedin-logo">
-            <a href="https://www.linkedin.com/in/joshua-paul-97451292/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-            </a>
-        </div>
+    </div>
+
+    <div class="linkedin-logo">
+        <a href="https://www.linkedin.com/in/joshua-paul-97451292/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+        </a>
     </div>
 </body>
 </html>
+
 
 
 

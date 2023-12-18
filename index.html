@@ -78,34 +78,47 @@
             overflow: hidden;
         }
 
+        .iframe-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            z-index: -1;
+            border-radius: 15px; /* Rounded corners */
+        }
+
         .iframe-container iframe {
             width: 100%;
             max-width: 800px;
             height: 500px;
             border: none;
-        }
-
-        /* Pseudo-elements for creating rounded corners */
-        .iframe-container::before,
-        .iframe-container::after {
-            content: "";
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background: #111;
+            border-radius: 15px; /* Rounded corners */
+            position: relative;
             z-index: 1;
         }
 
-        .iframe-container::before {
+        .animated-bg {
+            position: absolute;
             top: 0;
             left: 0;
-            border-top-left-radius: 15px; /* Adjust this value for corner radius */
+            width: 100%;
+            height: 100%;
+            z-index: -1;
         }
 
-        .iframe-container::after {
-            bottom: 0;
-            left: 0;
-            border-bottom-left-radius: 15px; /* Adjust this value for corner radius */
+        .linkedin-logo {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 2;
+        }
+
+        .linkedin-logo img {
+            width: 40px;
+            height: auto;
         }
 
         /* Media query for screens smaller than 768px (typical for mobile devices) */
@@ -170,6 +183,7 @@
     </div>
 </body>
 </html>
+
 
 
 
